@@ -378,10 +378,6 @@ footer a:hover {
   text-align: center;
 }
 
-/* ==============================
-   RESPONSIVO
-   ============================== */
-
 @media (max-width: 768px) {
   .hero-title { font-size: 1.8rem; }
   .cat-card   { width: 130px; }
