@@ -55,7 +55,7 @@
         <i class="fa fa-chevron-left"></i>
       </button>
 
-      <div class="hero-slide active" id="slide-0">
+      <article class="hero-slide active" id="slide-0">
         
         <h1 class="hero-title">Descubre la Lima<br>que pocos conocen</h1>
         <p class="hero-sub">Lugares increíbles y poco conocidos que esperan ser explorados.</p>
@@ -63,25 +63,25 @@
           <a href="#categorias" class="btn-primary-custom">Explorar ahora</a>
           <a href="#mapa" class="btn-outline-custom">Ver el mapa</a>
         </div>
-      </div>
+      </article>
 
-      <div class="hero-slide" id="slide-1">
+      <article class="hero-slide" id="slide-1">
         <h1 class="hero-title">Murales que cuentan<br>la historia de Lima</h1>
         <p class="hero-sub">Recorre Barranco y el Centro Histórico y encuentra arte en cada esquina.</p>
         <div class="d-flex gap-3 justify-content-center flex-wrap">
           <a href="#arte" class="btn-primary-custom">Ver Arte Oculto</a>
           <a href="#mapa" class="btn-outline-custom">Ver el mapa</a>
         </div>
-      </div>
+      </article>
 
-      <div class="hero-slide" id="slide-2">
+      <article class="hero-slide" id="slide-2">
         <h1 class="hero-title">Miradores secretos<br>con vistas al Pacífico</h1>
         <p class="hero-sub">Desde el Morro Solar hasta La Herradura, Lima tiene perspectivas que te sorprenderán.</p>
         <div class="d-flex gap-3 justify-content-center flex-wrap">
           <a href="#miradores" class="btn-primary-custom">Ver Miradores</a>
           <a href="#mapa" class="btn-outline-custom">Ver el mapa</a>
         </div>
-      </div>
+      </article>
 
       <div class="carousel-dots" role="tablist">
         <div class="dot active" onclick="goToSlide(0)" role="tab" aria-label="Slide 1"></div>
@@ -99,7 +99,7 @@
     <section class="section-pad bg-alt" id="categorias" aria-labelledby="cat-heading">
       <div class="container">
         <h2 class="section-title" id="cat-heading">¿Qué quieres descubrir hoy?</h2>
-        <div class="categories-grid">
+        <nav class="categories-grid" aria-label="Categorías">
 
           <a href="#miradores" class="cat-card" id="miradores">
             <i class="fa-solid fa-binoculars cat-icon" aria-hidden="true"></i>
@@ -125,7 +125,7 @@
             <div class="cat-count">9 lugares</div>
           </a>
 
-        </div>
+        </nav>
       </div>
     </section>
 
@@ -135,7 +135,7 @@
       <div class="container">
         <h2 class="section-title" id="places-heading">Lugares para comenzar</h2>
 
-        <div class="row g-4">
+        <section class="row g-4">
           <div class="col-12 col-md-6">
             <article class="place-card h-100">
               <div class="place-img">🌊</div>
@@ -167,9 +167,9 @@
               </article>
             </div>
           </div>
-        </div>
+        </section>
 
-        <div class="row g-4 mt-1">
+        <section class="row g-4 mt-1">
           <div class="col-12 col-md-4">
             <article class="place-card">
               <div class="place-img" style="height:160px; font-size:2.4rem;">🏛️</div>
@@ -200,7 +200,7 @@
               </div>
             </article>
           </div>
-        </div>
+        </section>
 
       </div>
     </section>
@@ -225,7 +225,7 @@
           </div>
 
           <div class="col-12 col-md-5">
-            <div class="map-info-card">
+            <aside class="map-info-card">
               <h3>Explora Lima a tu ritmo</h3>
               <p>Usa el mapa para encontrar miradores, cafeterías históricas, murales urbanos y calles con historia a tu alrededor.</p>
               <ul class="list-unstyled mb-4">
@@ -237,7 +237,7 @@
               <a href="#" class="btn-primary-custom">
                 <i class="fa-solid fa-map-location-dot me-2"></i> Abrir mapa completo
               </a>
-            </div>
+            </aside>
           </div>
 
         </div>
@@ -337,27 +337,27 @@
           <p style="font-size:0.88rem; line-height:1.6; margin-bottom:16px;">
             Descubriendo los rincones más sorprendentes de la ciudad que pocos conocen.
           </p>
-          <div class="footer-social">
+          <nav class="footer-social" aria-label="Redes sociales">
             <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
             <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
             <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
-          </div>
+          </nav>
         </div>
 
-        <div class="col-6 col-md-2">
+        <nav class="col-6 col-md-2" aria-label="Navegación del pie de página">
           <h5>Explorar</h5>
           <a href="#miradores">Miradores</a>
           <a href="#cafeterias">Cafeterías</a>
           <a href="#arte">Arte Oculto</a>
           <a href="#calles">Calles</a>
-        </div>
+        </nav>
 
-        <div class="col-6 col-md-2">
+        <nav class="col-6 col-md-2" aria-label="Navegación del pie de página">
           <h5>Info</h5>
           <a href="#">Sobre nosotros</a>
           <a href="#">Cómo colaborar</a>
           <a href="#">Contacto</a>
-        </div>
+        </nav>
 
         <div class="col-12 col-md-4">
           <h5>Contacto</h5>
@@ -371,7 +371,7 @@
 
       </div>
       <div class="footer-bottom">
-        <p>© 2026 Lima Oculta · Hecho con <i class="fa-solid fa-heart" style="color:var(--arena)"></i> en Lima</p>
+        <p><small>© 2026 Lima Oculta · Hecho con <i class="fa-solid fa-heart" style="color:var(--arena)"></i> en Lima</small></p>
       </div>
     </div>
   </footer>
