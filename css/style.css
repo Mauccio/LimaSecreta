@@ -382,3 +382,81 @@ footer a:hover {
   .hero-title { font-size: 1.8rem; }
   .cat-card   { width: 130px; }
 }
+
+
+/* ==============================
+   FAQ - Preguntas Frecuentes
+   ============================== */
+
+.faq-item {
+  background-color: #ffffff;
+  border-radius: 10px;
+  border: 1px solid #e0e0ee;
+  overflow: hidden;
+  cursor: pointer;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.faq-item:hover { 
+  border-color: #b0b0cc;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.07);
+}
+
+.faq-item[open] {
+  border-color: #1C1C2E;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.09);
+}
+
+.faq-item summary {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 18px 20px;
+  font-weight: 600;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.05rem;
+  color: #1C1C2E;
+  user-select: none;
+  transition: color 0.2s ease;
+}
+
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-item:hover summary {
+  color: #000000;
+}
+
+.faq-icon {
+  font-size: 0.8rem;
+  color: #999;
+  flex-shrink: 0;
+  transition: transform 0.35s ease, color 0.25s ease;
+}
+
+.faq-item[open] .faq-icon {
+  transform: rotate(180deg);
+  color: #1C1C2E;
+}
+
+.faq-body {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.35s ease;
+}
+
+.faq-item[open] .faq-body {
+  grid-template-rows: 1fr;
+}
+
+.faq-body > p {
+  overflow: hidden;
+  color: #3D3D4E;
+  font-size: 0.95rem;
+  line-height: 1.65;
+  padding: 0 20px 18px;
+  margin: 0;
+}

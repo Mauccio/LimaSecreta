@@ -28,7 +28,7 @@
         </a>
 
         <!-- Navegación -->
-        <nav class="d-none d-md-flex align-items-center gap-1">
+        <nav class="d-none d-md-flex align-items-center gap-1" aria-label="Navegación principal">
           <a href="#">Inicio</a>
           <span class="sep">/</span>
           <a href="#miradores">Miradores</a>
@@ -38,6 +38,8 @@
           <a href="#arte">Arte Oculto</a>
           <span class="sep">/</span>
           <a href="#calles" class="active">Calles con Historia</a>
+          <span class="sep">/</span>
+          <a href="#faq">Preguntas Frecuentes</a>
         </nav>
 
         <input type="search" class="search-bar" placeholder="&#128269; Buscar lugares...">
@@ -135,7 +137,7 @@
       <div class="container">
         <h2 class="section-title" id="places-heading">Lugares para comenzar</h2>
 
-        <section class="row g-4">
+        <div class="row g-4">
           <div class="col-12 col-md-6">
             <article class="place-card h-100">
               <div class="place-img">🌊</div>
@@ -167,9 +169,9 @@
               </article>
             </div>
           </div>
-        </section>
+        </div>
 
-        <section class="row g-4 mt-1">
+        <div class="row g-4 mt-1">
           <div class="col-12 col-md-4">
             <article class="place-card">
               <div class="place-img" style="height:160px; font-size:2.4rem;">🏛️</div>
@@ -200,7 +202,7 @@
               </div>
             </article>
           </div>
-        </section>
+        </div>
 
       </div>
     </section>
@@ -243,6 +245,52 @@
         </div>
       </div>
     </section>
+
+    <!-- Preguntas Frecuentes -->
+    <section class="section-pad bg-alt" id="faq" aria-labelledby="faq-heading">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-8">
+            <h2 class="section-title text-center" id="faq-heading">Preguntas Frecuentes</h2>
+            
+            <div class="d-flex flex-column gap-3 mt-4">
+              
+              <details class="faq-item">
+                <summary>
+                  ¿Los lugares listados son de libre acceso?
+                  <i class="fa-solid fa-chevron-down faq-icon"></i>
+                </summary>
+                <div class="faq-body">
+                  <p>La mayoría de los miradores y calles históricas son públicos y gratuitos. En el caso de las cafeterías o centros de arte, el ingreso puede depender del consumo o de una entrada.</p>
+                </div>
+              </details>
+
+              <details class="faq-item">
+                <summary>
+                  ¿Cómo puedo sugerir un nuevo rincón oculto?
+                  <i class="fa-solid fa-chevron-down faq-icon"></i>
+                </summary>
+                <div class="faq-body">
+                  <p>Puedes usar el formulario que está justo abajo. Cuéntanos sobre el lugar, por qué es especial y nuestro equipo lo visitará para verificarlo antes de añadirlo al mapa.</p>
+                </div>
+              </details>
+
+              <details class="faq-item">
+                <summary>
+                  ¿Con qué frecuencia se actualizan los lugares?
+                  <i class="fa-solid fa-chevron-down faq-icon"></i>
+                </summary>
+                <div class="faq-body">
+                  <p>Revisamos y añadimos nuevos rincones cada mes. También actualizamos la información existente cuando recibimos sugerencias o cuando verificamos cambios en el lugar.</p>
+                </div>
+              </details>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
 
     <!-- Formulario de sugerencias -->
     <section class="section-pad" aria-labelledby="form-heading">
@@ -344,7 +392,7 @@
           </nav>
         </div>
 
-        <nav class="col-6 col-md-2" aria-label="Navegación del pie de página">
+        <nav class="col-6 col-md-2" aria-label="Explorar">
           <h5>Explorar</h5>
           <a href="#miradores">Miradores</a>
           <a href="#cafeterias">Cafeterías</a>
@@ -352,10 +400,11 @@
           <a href="#calles">Calles</a>
         </nav>
 
-        <nav class="col-6 col-md-2" aria-label="Navegación del pie de página">
+        <nav class="col-6 col-md-2" aria-label="Info">
           <h5>Info</h5>
           <a href="#">Sobre nosotros</a>
           <a href="#">Cómo colaborar</a>
+          <a href="#faq">Preguntas Frecuentes</a>
           <a href="#">Contacto</a>
         </nav>
 
