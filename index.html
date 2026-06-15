@@ -3,389 +3,233 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lima Oculta</title>
-
+  <title>Lima Secreta</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-
   <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
-  <header>
+
+  <header class="barra-navegacion">
     <div class="container py-2">
       <div class="d-flex align-items-center justify-content-between flex-wrap gap-2">
-
-        <a href="#" class="navbar-brand-custom">
+        <a href="#" class="enlace-marca">
           <div class="brand-name">
-            <img src="img/logo.png" alt="Lima Oculta" id="logo">
+            <img src="img/logo.png" alt="Lima Secreta" id="logo">
           </div>
         </a>
 
-        <!-- Navegación -->
-        <nav class="d-none d-md-flex align-items-center gap-1" aria-label="Navegación principal">
-          <a href="#">Inicio</a>
-          <span class="sep">/</span>
-          <a href="#miradores">Miradores</a>
-          <span class="sep">/</span>
-          <a href="#cafeterias">Cafeterías</a>
-          <span class="sep">/</span>
-          <a href="#arte">Arte Oculto</a>
-          <span class="sep">/</span>
-          <a href="#calles" class="active">Calles con Historia</a>
-          <span class="sep">/</span>
-          <a href="#faq">Preguntas Frecuentes</a>
+        <nav class="enlaces-menu d-none d-md-flex align-items-center gap-3">
+          <a href="#categorias">Categorías</a>
+          <span class="puntos-sep">·</span>
+          <span class="contenedor-badge">
+            <a href="#mapa">Mapa Interactivo</a>
+            <span class="alerta-nueva">Nuevo</span>
+          </span>
+          <span class="puntos-sep">·</span>
+          <a href="#sugerencia-section">Sugerir Lugar</a>
+          <span class="puntos-sep">·</span>
+          <a href="#faq">Preguntas</a>
         </nav>
 
-        <input type="search" class="search-bar" placeholder="&#128269; Buscar lugares...">
+        <div class="caja-buscar">
+          <i class="fa-solid fa-magnifying-glass icono-lupa"></i>
+          <input type="text" placeholder="Buscar lugar secreto...">
+        </div>
       </div>
     </div>
   </header>
 
+  <section class="hero-section" aria-label="Destacado principal">
+    <button class="carousel-nav carousel-prev" onclick="changeSlide(-1)" aria-label="Anterior">
+      <i class="fa fa-chevron-left"></i>
+    </button>
 
-  <main>
-
-    <!-- Hero y Carrusel -->
-    <section class="hero-section" aria-label="Destacado principal">
-
-      <button class="carousel-nav carousel-prev" onclick="changeSlide(-1)" aria-label="Anterior">
-        <i class="fa fa-chevron-left"></i>
-      </button>
-
-      <article class="hero-slide active" id="slide-0">
-        
+    <article class="hero-slide active" id="slide-0">
+      <img src="img/limacentro.jpg" alt="centrodelima" class="hero-bg-img">
+      <div class="hero-content">
         <h1 class="hero-title">Descubre la Lima<br>que pocos conocen</h1>
         <p class="hero-sub">Lugares increíbles y poco conocidos que esperan ser explorados.</p>
         <div class="d-flex gap-3 justify-content-center flex-wrap">
-          <a href="#categorias" class="btn-primary-custom">Explorar ahora</a>
-          <a href="#mapa" class="btn-outline-custom">Ver el mapa</a>
+          <a href="#categorias" class="boton-principal">Explorar ahora</a>
+          <a href="#mapa" class="boton-secundario">Ver el mapa</a>
         </div>
-      </article>
+      </div>
+    </article>
 
-      <article class="hero-slide" id="slide-1">
+    <article class="hero-slide" id="slide-1">
+	  <img src="img/sanisidro.jpg" alt="sanisidro" class="hero-bg-img">
+      
+      <div class="hero-content">
         <h1 class="hero-title">Murales que cuentan<br>la historia de Lima</h1>
         <p class="hero-sub">Recorre Barranco y el Centro Histórico y encuentra arte en cada esquina.</p>
         <div class="d-flex gap-3 justify-content-center flex-wrap">
-          <a href="#arte" class="btn-primary-custom">Ver Arte Oculto</a>
-          <a href="#mapa" class="btn-outline-custom">Ver el mapa</a>
+          <a href="#arte" class="boton-principal">Ver Arte Oculto</a>
+          <a href="#mapa" class="boton-secundario">Ver el mapa</a>
         </div>
-      </article>
+      </div>
+    </article>
 
-      <article class="hero-slide" id="slide-2">
-        <h1 class="hero-title">Miradores secretos<br>con vistas al Pacífico</h1>
+    <article class="hero-slide" id="slide-2">
+      <img src="img/miraflores.jpg" alt="costaverde" class="hero-bg-img">
+      <div class="hero-content">
+        <h1 class="hero-title">Miradores secretos<br>con vistas al mar</h1>
         <p class="hero-sub">Desde el Morro Solar hasta La Herradura, Lima tiene perspectivas que te sorprenderán.</p>
         <div class="d-flex gap-3 justify-content-center flex-wrap">
-          <a href="#miradores" class="btn-primary-custom">Ver Miradores</a>
-          <a href="#mapa" class="btn-outline-custom">Ver el mapa</a>
+          <a href="#miradores" class="boton-principal">Ver Miradores</a>
+          <a href="#mapa" class="boton-secundario">Ver el mapa</a>
         </div>
-      </article>
-
-      <div class="carousel-dots" role="tablist">
-        <div class="dot active" onclick="goToSlide(0)" role="tab" aria-label="Slide 1"></div>
-        <div class="dot"        onclick="goToSlide(1)" role="tab" aria-label="Slide 2"></div>
-        <div class="dot"        onclick="goToSlide(2)" role="tab" aria-label="Slide 3"></div>
       </div>
+    </article>
 
-      <button class="carousel-nav carousel-next" onclick="changeSlide(1)" aria-label="Siguiente">
-        <i class="fa fa-chevron-right"></i>
-      </button>
+    <div class="carousel-dots">
+      <div class="dot active" onclick="goToSlide(0)"></div>
+      <div class="dot" onclick="goToSlide(1)"></div>
+      <div class="dot" onclick="goToSlide(2)"></div>
+    </div>
 
-    </section>
+    <button class="carousel-nav carousel-next" onclick="changeSlide(1)" aria-label="Siguiente">
+      <i class="fa fa-chevron-right"></i>
+    </button>
+  </section>
 
-    <!-- Categorías -->
-    <section class="section-pad bg-alt" id="categorias" aria-labelledby="cat-heading">
-      <div class="container">
-        <h2 class="section-title" id="cat-heading">¿Qué quieres descubrir hoy?</h2>
-        <nav class="categories-grid" aria-label="Categorías">
+  <main class="container my-5" id="categorias">
+    <div class="text-center mb-5">
+      <h2 class="section-title">¿Qué deseas explorar hoy?</h2>
+      <p class="text-muted">Selecciona una categoría para descubrir joyas ocultas de la ciudad.</p>
+    </div>
 
-          <a href="#miradores" class="cat-card" id="miradores">
-            <i class="fa-solid fa-binoculars cat-icon" aria-hidden="true"></i>
-            <div class="cat-label">Miradores</div>
-            <div class="cat-count">8 lugares</div>
-          </a>
+    <div class="d-flex justify-content-center gap-4 flex-wrap">
+      <a href="#miradores" class="cat-card">
+        <div class="cat-icon-wrapper"><i class="fa-solid fa-mountain-sun"></i></div>
+        <div class="cat-name">Miradores</div>
+      </a>
+      <a href="#cafeterias" class="cat-card">
+        <div class="cat-icon-wrapper"><i class="fa-solid fa-mug-saucer"></i></div>
+        <div class="cat-name">Cafeterías</div>
+      </a>
+      <a href="#arte" class="cat-card">
+        <div class="cat-icon-wrapper"><i class="fa-solid fa-palette"></i></div>
+        <div class="cat-name">Arte Oculto</div>
+      </a>
+      <a href="#calles" class="cat-card">
+        <div class="cat-icon-wrapper"><i class="fa-solid fa-road"></i></div>
+        <div class="cat-name">Calles Históricas</div>
+      </a>
+    </div>
 
-          <a href="#cafeterias" class="cat-card" id="cafeterias">
-            <i class="fa-solid fa-mug-hot cat-icon" aria-hidden="true"></i>
-            <div class="cat-label">Cafeterías</div>
-            <div class="cat-count">14 lugares</div>
-          </a>
+    <hr class="separador-seccion">
 
-          <a href="#arte" class="cat-card" id="arte">
-            <i class="fa-solid fa-palette cat-icon" aria-hidden="true"></i>
-            <div class="cat-label">Arte Oculto</div>
-            <div class="cat-count">11 lugares</div>
-          </a>
-
-          <a href="#calles" class="cat-card" id="calles">
-            <i class="fa-solid fa-landmark cat-icon" aria-hidden="true"></i>
-            <div class="cat-label">Calles con Historia</div>
-            <div class="cat-count">9 lugares</div>
-          </a>
-
-        </nav>
-      </div>
-    </section>
-
-
-    <!-- Lugares-->
-    <section class="section-pad" aria-labelledby="places-heading">
-      <div class="container">
-        <h2 class="section-title" id="places-heading">Lugares para comenzar</h2>
-
-        <div class="row g-4">
-          <div class="col-12 col-md-6">
-            <article class="place-card h-100">
-              <div class="place-img">🌊</div>
-              <div class="place-body">
-                <span class="place-tag">Mirador</span>
-                <h3 class="place-name">Morro Solar</h3>
-                <p class="place-desc">El mirador natural más alto de Lima con vistas panorámicas al Pacífico y a la ciudad. Ideal para visitar al atardecer.</p>
-              </div>
-            </article>
+    <section id="miradores" class="mb-5 py-4">
+      <div class="row align-items-center g-4">
+        <div class="col-12 col-md-6">
+          <span class="badge bg-secondary mb-2" style="background-color: #1C1C2E !important;">Miradores</span>
+          <h3 class="mb-3 titulos-secciones">El Acantilado Escondido</h3>
+          <p>Ubicado en los límites menos transitados de Barranco, este pequeño malecón ofrece bancos de madera antiguos bajo la sombra de sauces, ideales para ver el atardecer limeño sin las aglomeraciones del Parque del Amor.</p>
+          <p class="text-muted"><i class="fa-solid fa-location-dot me-2"></i> Barranco · Acceso Libre</p>
+          <a href="#" class="btn btn-sm btn-dark mt-2">Cómo llegar →</a>
+        </div>
+        <div class="col-12 col-md-6">
+          <div class="imagen-contenedor-vacio">
+            <i class="fa-regular fa-image fa-2x"></i>
           </div>
+        </div>
+      </div>
+    </section>
 
-          <div class="col-12 col-md-6">
-            <div class="d-flex flex-column gap-4 h-100">
-              <article class="place-card flex-fill">
-                <div class="place-img" style="height:140px; font-size:2.2rem;">🎨</div>
-                <div class="place-body">
-                  <span class="place-tag">Arte Oculto</span>
-                  <h3 class="place-name">Murales de Barranco</h3>
-                  <p class="place-desc">Arte urbano escondido entre los jirones del bohemio Barranco.</p>
-                </div>
-              </article>
-              <article class="place-card flex-fill">
-                <div class="place-img" style="height:140px; font-size:2.2rem;">☕</div>
-                <div class="place-body">
-                  <span class="place-tag">Cafetería</span>
-                  <h3 class="place-name">Café El Virrey</h3>
-                  <p class="place-desc">Café de especialidad escondido en el Centro Histórico, en un palacio colonial.</p>
-                </div>
-              </article>
+    <section id="cafeterias" class="mb-5 py-4">
+      <div class="row align-items-center g-4 flex-md-row-reverse">
+        <div class="col-12 col-md-6">
+          <span class="badge bg-secondary mb-2" style="background-color: #1C1C2E !important;">Cafeterías</span>
+          <h3 class="mb-3 titulos-secciones">Café del Callejón</h3>
+          <p>Escondido en un antiguo pasaje del siglo XIX en el Centro Histórico, este lugar tuesta su propio café traído de Chanchamayo. Su patio interior lleno de plantas y azulejos coloniales te transportará al pasado de Lima.</p>
+          <p class="text-muted"><i class="fa-solid fa-location-dot me-2"></i> Cercado de Lima · $$</p>
+          <a href="#" class="btn btn-sm btn-dark mt-2">Ver Carta →</a>
+        </div>
+        <div class="col-12 col-md-6">
+          <div class="imagen-contenedor-vacio">
+            <i class="fa-regular fa-image fa-2x"></i>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="separador-seccion">
+
+    <section id="mapa" class="mb-5 text-center">
+      <h3 class="mb-4 titulos-secciones">Mapa de Rincones Ocultos</h3>
+      <div class="contenedor-mapa-construccion">
+        <div class="map-icon"><i class="fa-solid fa-map-location-dot"></i></div>
+        <h5>Mapa Interactivo en Construcción</h5>
+        <p class="text-muted small px-3">Pronto podrás visualizar y filtrar los puntos secretos directamente usando geolocalización.</p>
+      </div>
+    </section>
+
+    <hr class="separador-seccion">
+
+    <section id="sugerencia-section" class="row justify-content-center">
+      <div class="col-12 col-md-8 col-lg-6">
+        <div class="caja-formulario">
+          <h3 class="text-center mb-3 titulos-secciones">¿Conoces un secreto?</h3>
+          <p class="text-center text-muted small mb-4">Ayúdanos a expandir el mapa compartiendo ese rincón especial que solo tú conoces de la capital.</p>
+
+          <form id="sugerencia-form">
+            <div class="mb-3">
+              <label for="lugar" class="form-label">Nombre del lugar</label>
+              <input type="text" class="form-control" id="lugar" required placeholder="Ej. El Mirador del Sauce">
             </div>
-          </div>
-        </div>
-
-        <div class="row g-4 mt-1">
-          <div class="col-12 col-md-4">
-            <article class="place-card">
-              <div class="place-img" style="height:160px; font-size:2.4rem;">🏛️</div>
-              <div class="place-body">
-                <span class="place-tag">Calle con Historia</span>
-                <h3 class="place-name">Jirón Quilca</h3>
-                <p class="place-desc">La calle de los libreros, poetas y bohemios del Centro de Lima.</p>
-              </div>
-            </article>
-          </div>
-          <div class="col-12 col-md-4">
-            <article class="place-card">
-              <div class="place-img" style="height:160px; font-size:2.4rem;">🌇</div>
-              <div class="place-body">
-                <span class="place-tag">Mirador</span>
-                <h3 class="place-name">Cerro San Cristóbal</h3>
-                <p class="place-desc">Vista 360° de Lima desde lo alto, con la inmensa cruz blanca.</p>
-              </div>
-            </article>
-          </div>
-          <div class="col-12 col-md-4">
-            <article class="place-card">
-              <div class="place-img" style="height:160px; font-size:2.4rem;">🧡</div>
-              <div class="place-body">
-                <span class="place-tag">Arte Oculto</span>
-                <h3 class="place-name">El Callejón de los Milagros</h3>
-                <p class="place-desc">Pasaje cargado de historia y arte popular en el Rímac.</p>
-              </div>
-            </article>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-
-    <!-- iframe Google Maps -->
-    <section class="section-pad bg-alt" id="mapa" aria-labelledby="map-heading">
-      <div class="container">
-        <h2 class="section-title" id="map-heading">Encuentra lugares cerca de ti</h2>
-        <div class="row g-4 align-items-center">
-
-          <div class="col-12 col-md-7">
-            <div class="map-wrapper">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d124903.23744820897!2d-77.02824!3d-12.04655!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2spe!4v1700000000000"
-                title="Mapa de Lima"
-                loading="lazy"
-                allowfullscreen
-                referrerpolicy="no-referrer-when-downgrade">
-              </iframe>
+            <div class="mb-3">
+              <label for="distrito" class="form-label">Distrito</label>
+              <select class="form-select" id="distrito" required>
+                <option value="">Selecciona un distrito</option>
+                <option value="barranco">Barranco</option>
+                <option value="miraflores">Miraflores</option>
+                <option value="cercado">Cercado de Lima</option>
+                <option value="pueblo-libre">Pueblo Libre</option>
+                <option value="otros">Otro distrito</option>
+              </select>
             </div>
-          </div>
-
-          <div class="col-12 col-md-5">
-            <aside class="map-info-card">
-              <h3>Explora Lima a tu ritmo</h3>
-              <p>Usa el mapa para encontrar miradores, cafeterías históricas, murales urbanos y calles con historia a tu alrededor.</p>
-              <ul class="list-unstyled mb-4">
-                <li class="mb-2"><i class="fa-solid fa-location-dot text-primary me-2"></i> Miradores con vistas al mar</li>
-                <li class="mb-2"><i class="fa-solid fa-mug-hot text-primary me-2"></i> Cafeterías en casas coloniales</li>
-                <li class="mb-2"><i class="fa-solid fa-palette text-primary me-2"></i> Murales de artistas locales</li>
-                <li class="mb-2"><i class="fa-solid fa-road text-primary me-2"></i> Jirones con siglos de historia</li>
-              </ul>
-              <a href="#" class="btn-primary-custom">
-                <i class="fa-solid fa-map-location-dot me-2"></i> Abrir mapa completo
-              </a>
-            </aside>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- Preguntas Frecuentes -->
-    <section class="section-pad bg-alt" id="faq" aria-labelledby="faq-heading">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-12 col-md-8">
-            <h2 class="section-title text-center" id="faq-heading">Preguntas Frecuentes</h2>
-            
-            <div class="d-flex flex-column gap-3 mt-4">
-              
-              <details class="faq-item">
-                <summary>
-                  ¿Los lugares listados son de libre acceso?
-                  <i class="fa-solid fa-chevron-down faq-icon"></i>
-                </summary>
-                <div class="faq-body">
-                  <p>La mayoría de los miradores y calles históricas son públicos y gratuitos. En el caso de las cafeterías o centros de arte, el ingreso puede depender del consumo o de una entrada.</p>
-                </div>
-              </details>
-
-              <details class="faq-item">
-                <summary>
-                  ¿Cómo puedo sugerir un nuevo rincón oculto?
-                  <i class="fa-solid fa-chevron-down faq-icon"></i>
-                </summary>
-                <div class="faq-body">
-                  <p>Puedes usar el formulario que está justo abajo. Cuéntanos sobre el lugar, por qué es especial y nuestro equipo lo visitará para verificarlo antes de añadirlo al mapa.</p>
-                </div>
-              </details>
-
-              <details class="faq-item">
-                <summary>
-                  ¿Con qué frecuencia se actualizan los lugares?
-                  <i class="fa-solid fa-chevron-down faq-icon"></i>
-                </summary>
-                <div class="faq-body">
-                  <p>Revisamos y añadimos nuevos rincones cada mes. También actualizamos la información existente cuando recibimos sugerencias o cuando verificamos cambios en el lugar.</p>
-                </div>
-              </details>
-
+            <div class="mb-3">
+              <label for="descripcion" class="form-label">¿Por qué es especial?</label>
+              <textarea class="form-control" id="descripcion" rows="3" required placeholder="Describe qué lo hace único y cómo llegar..."></textarea>
             </div>
+            <button type="submit" class="boton-enviar" id="submit-btn">Enviar Sugerencia</button>
+          </form>
+
+          <div id="form-success" class="alert alert-success d-none mt-3 text-center" role="alert">
+            ¡Muchas gracias! Tu sugerencia ha sido enviada para revisión del equipo.
           </div>
         </div>
       </div>
     </section>
 
+    <hr class="separador-seccion">
 
-    <!-- Formulario de sugerencias -->
-    <section class="section-pad" aria-labelledby="form-heading">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-12 col-md-7 text-center">
-            <h2 class="section-title" id="form-heading">¿Conoces un lugar oculto?</h2>
-            <p class="mb-4" style="color:var(--texto)">Cuéntanos sobre ese rincón secreto de Lima que merece ser descubierto.</p>
-          </div>
+    <section id="faq" class="mb-5">
+      <h3 class="text-center mb-4 titulos-secciones">Preguntas Frecuentes</h3>
+      <div class="d-flex flex-column gap-3 max-width-700 mx-auto">
+        <div class="pregunta-bloque">
+          <h5 class="pregunta-titulo">¿Los lugares listados son todos de libre acceso?</h5>
+          <p class="pregunta-respuesta">La gran mayoría son miradores, parques o pasajes públicos de acceso gratuito. En el caso de cafeterías o centros culturales independientes, especificamos una referencia de rango de precios.</p>
         </div>
-        <div class="row justify-content-center">
-          <div class="col-12 col-md-8">
-            <form id="sugerencia-form" novalidate style="background:var(--gris-bg); padding:32px; border-radius:12px; border:1px solid #e0e0ee;">
-              <div class="row g-3">
-
-                <div class="col-12 col-md-6">
-                  <label for="nombre" class="form-label">Tu nombre</label>
-                  <input type="text" id="nombre" name="nombre" class="form-control" placeholder="Ej. María García" required>
-                </div>
-
-                <div class="col-12 col-md-6">
-                  <label for="email" class="form-label">Tu correo</label>
-                  <input type="email" id="email" name="email" class="form-control" placeholder="correo@ejemplo.com" required>
-                </div>
-
-                <div class="col-12 col-md-6">
-                  <label for="categoria" class="form-label">Categoría del lugar</label>
-                  <select id="categoria" name="categoria" class="form-select" required>
-                    <option value="">Selecciona una categoría</option>
-                    <option value="mirador">Mirador</option>
-                    <option value="cafeteria">Cafetería</option>
-                    <option value="arte">Arte Oculto</option>
-                    <option value="calle">Calle con Historia</option>
-                    <option value="otro">Otro</option>
-                  </select>
-                </div>
-
-                <div class="col-12 col-md-6">
-                  <label class="form-label">¿Has visitado el lugar?</label>
-                  <div class="d-flex gap-3 mt-1">
-                    <div class="form-check">
-                      <input class="form-check-input" type="radio" name="visitado" id="si" value="si">
-                      <label class="form-check-label" for="si">Sí</label>
-                    </div>
-                    <div class="form-check">
-                      <input class="form-check-input" type="radio" name="visitado" id="no" value="no">
-                      <label class="form-check-label" for="no">No</label>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="col-12">
-                  <label for="descripcion" class="form-label">Describe el lugar</label>
-                  <textarea id="descripcion" name="descripcion" class="form-control" rows="4"
-                    placeholder="¿Dónde está? ¿Qué lo hace especial?" required></textarea>
-                </div>
-
-                <div class="col-12">
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="notif" name="notif" value="1">
-                    <label class="form-check-label" for="notif">
-                      Quiero recibir novedades sobre nuevos lugares en Lima Oculta
-                    </label>
-                  </div>
-                </div>
-
-                <div class="col-12">
-                  <button type="submit" class="btn-primary-custom w-100" id="submit-btn">
-                    <i class="fa-solid fa-paper-plane me-2"></i> Enviar sugerencia
-                  </button>
-                  <div id="form-success" class="alert alert-success mt-3 d-none" role="alert">
-                    <i class="fa-solid fa-circle-check me-2"></i>
-                    ¡Gracias! Tu sugerencia fue enviada. La revisaremos pronto.
-                  </div>
-                </div>
-
-              </div>
-            </form>
-          </div>
+        <div class="pregunta-bloque">
+          <h5 class="pregunta-titulo">¿Cómo verifican que la información de los lugares es real?</h5>
+          <p class="pregunta-respuesta">Nuestro equipo visita presencialmente cada sugerencia enviada por la comunidad antes de añadirla oficialmente al catálogo web para asegurar su accesibilidad y seguridad.</p>
         </div>
       </div>
     </section>
-
   </main>
 
-  <footer>
+  <footer class="pie-sitio">
     <div class="container">
       <div class="row g-4">
-
         <div class="col-12 col-md-4">
-          <div class="footer-logo">Lima Oculta</div>
-          <p style="font-size:0.88rem; line-height:1.6; margin-bottom:16px;">
-            Descubriendo los rincones más sorprendentes de la ciudad que pocos conocen.
-          </p>
-          <nav class="footer-social" aria-label="Redes sociales">
+          <h4 style="font-family:'Playfair Display', serif; font-weight:900; letter-spacing:0.5px;">Lima Secreta</h4>
+          <p class="text-muted small mt-2 pe-3">Una iniciativa independiente dedicada a catalogar y preservar el patrimonio urbano, paisajístico y cultural no tradicional de la ciudad de Lima.</p>
+          <nav class="redes-pie mt-3" aria-label="Redes Sociales">
             <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
             <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
             <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
@@ -394,38 +238,40 @@
 
         <nav class="col-6 col-md-2" aria-label="Explorar">
           <h5>Explorar</h5>
-          <a href="#miradores">Miradores</a>
-          <a href="#cafeterias">Cafeterías</a>
-          <a href="#arte">Arte Oculto</a>
-          <a href="#calles">Calles</a>
+          <ul class="list-unstyled enlaces-pie">
+            <li><a href="#miradores">Miradores</a></li>
+            <li><a href="#cafeterias">Cafeterías</a></li>
+            <li><a href="#arte">Arte Oculto</a></li>
+            <li><a href="#calles">Calles</a></li>
+          </ul>
         </nav>
 
         <nav class="col-6 col-md-2" aria-label="Info">
           <h5>Info</h5>
-          <a href="#">Sobre nosotros</a>
-          <a href="#">Cómo colaborar</a>
-          <a href="#faq">Preguntas Frecuentes</a>
-          <a href="#">Contacto</a>
+          <ul class="list-unstyled enlaces-pie">
+            <li><a href="#">Sobre nosotros</a></li>
+            <li><a href="#">Cómo colaborar</a></li>
+            <li><a href="#faq">Preguntas Frecuentes</a></li>
+            <li><a href="#">Contacto</a></li>
+          </ul>
         </nav>
 
         <div class="col-12 col-md-4">
           <h5>Contacto</h5>
-          <p style="font-size:0.88rem;">
-            <i class="fa-solid fa-envelope me-2" style="color:var(--arena)"></i> hola@limaoculta.pe
+          <p style="font-size:0.88rem; margin-bottom: 0;">
+            <i class="fa-solid fa-envelope me-2" style="color:#D4AF37"></i> limasecreta@gmail.com
           </p>
-          <p style="font-size:0.88rem; margin-top:8px;">
-            <i class="fa-solid fa-map-pin me-2" style="color:var(--arena)"></i> Lima, Perú
+          <p style="font-size:0.88rem; margin-top:8px; margin-bottom: 0;">
+            <i class="fa-solid fa-map-pin me-2" style="color:#D4AF37"></i> Lima, Perú
           </p>
         </div>
-
       </div>
-      <div class="footer-bottom">
-        <p><small>© 2026 Lima Oculta · Hecho con <i class="fa-solid fa-heart" style="color:var(--arena)"></i> en Lima</small></p>
+      <div class="pie-copyright">
+        <p><small>© 2026 Lima Secreta</p>
       </div>
     </div>
   </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="js/script.js"></script>
 </body>
 </html>
